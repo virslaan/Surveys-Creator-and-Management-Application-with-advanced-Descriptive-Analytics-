@@ -1,0 +1,148 @@
+
+  <div class="card" style="display: grid" >
+    <div class="card-body">
+  
+
+ <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+<!--{{obj |json}}-->    
+    <div class="form-group">
+      <label>Survey Name</label>
+      <input type="text" #name="ngModel" required class="form-control" [class.is-invalid]="name.invalid && name.touched" name="name" [(ngModel)]="obj.name" >
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched">Survey Name is required</small>
+    </div>
+
+    <div class="form-group">
+      <label>Write the question</label>
+      <input type="text" class="form-control" name="question" [(ngModel)]="obj.question">
+    </div>
+
+    <div class="form-group">
+      <label>Enter Choice</label>
+   
+      <input type="choice" #choice="ngModel" required  class="form-control"  name="choice" [(ngModel)]="choices[0].choice_text">
+      <input type="choice" #choice="ngModel" required  class="form-control"  name="choice" [(ngModel)]="choices[1].choice_text">
+     
+     </div>
+
+    
+    
+     <button type=button class="btn btn-success"(click)="check()">Set Up My Survey</button>
+
+  </form>
+
+     
+    
+
+
+  <div class="bg">
+    <div class="container">
+        <h1  label="arial" class="heading">Add EXTRA MORE Choices here!</h1>
+        <h6 style="color:red;">First Add a blank and set it otherwise Survey will not look the way you desired!</h6>
+        <!--{{surveyForm.value | json}}-->
+        <form [formGroup]="surveyForm">
+        <div class="form-group">
+         
+  <span>  <button type="button" class="btn btn-primary btn-sm m-1" (click)="addoptions()">+</button></span>
+  
+          <div formArrayName="options" *ngFor="let option of options.controls;let i=index" >
+            <input type="text" class="form-control my-1" placeholder="Write an option for survey"[formControlName]="i">
+            
+          
+  </div>           
+          </div>
+          <button class="btn btn-success" (click)=addoptions()>Add options</button>
+          <button class="btn btn-success"(click)=setoptions()>Set new options</button>
+    
+        </form>
+          <br><br>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+<!--<div class="bg">
+    <div class="container">
+  
+      <h1  label="arial" class="heading">Survey Form</h1>
+  
+  
+    
+      {{surveyForm.value | json}}
+  
+  
+      <form [formGroup]="surveyForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="surveyName">Survey Name</label>
+            <input [class.is-invalid]="surveyForm.get('surveyName').invalid &&surveyForm.get('surveyName').touched" formControlName="surveyName" type="text" class=form-control>
+            <small [class.d-none]="surveyForm.get('surveyName').valid || surveyForm.get('surveyName').untouched" class="text-danger">Survey with no survey Name is pretty uncool"</small>
+      
+  
+  
+          <label for="Question">Question Text Here:</label>
+  
+          <input type="text" class="form-control" id="question_text" placeholder="Type Survey Question Here "
+            formControlName="question_text" />
+  
+            
+            <div formArrayName="optionscount" *ngFor="let optioncount in optionscount.controls;let i =index">
+              <input type="number" class="form-control my-1" placeholder="Set option count"[formControlName]="i">
+            </div>
+            
+  
+  
+  <span>  <button type="button" class="btn btn-primary btn-sm m-1" (click)="addoptions()">+</button></span>
+  
+          <div formArrayName="options" *ngFor="let option of options.controls;let i=index" >
+            <input type="text" class="form-control my-1" placeholder="Write an option for survey"[formControlName]="i">
+            
+          
+  </div>           
+          </div>
+          <button class="btn btn-success">Submit</button>
+          </form>
+          <br><br>
+          
+
+        -->        

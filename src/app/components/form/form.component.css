@@ -1,0 +1,42 @@
+.bg {
+    /* The image used */
+     /*background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg"); */
+    /* background-image: url("https://wallpaperplay.com/walls/full/5/8/4/145573.jpg"); */
+    /* Full height */
+   /* height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px black; 
+    color: white; 
+    /* align:center */
+    margin-top:20px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+  .heading{
+
+    font-size: x-large;
+    font-family:'Calibri';
+        font-display: centre;
+
+
+  }
+  .card{
+    background-color:rgba(240, 240, 240, 0.925)
+  }
+
+
+  .row{
+    margin-left: 20px;
+}
+
+h3{
+    margin-left: 20px;
+}
+
+.mycards{
+    margin-top: 40px;
+}

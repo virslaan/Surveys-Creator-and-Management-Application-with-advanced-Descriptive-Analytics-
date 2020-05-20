@@ -7,20 +7,21 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "api": "json-server api/db.json --routes api/routes.json --no-cors=true"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.0",
+    "@angular/cdk": "^9.2.1",
     "@angular/common": "~9.1.0",
     "@angular/compiler": "~9.1.0",
     "@angular/core": "~9.1.0",
     "@angular/forms": "~9.1.0",
+    "@angular/material": "^9.2.1",
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
-    "json-server": "^0.16.1",
+    "chart.js": "^2.9.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -44,8 +45,6 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3",
-    
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+    "typescript": "~3.8.3"
+  }
 }

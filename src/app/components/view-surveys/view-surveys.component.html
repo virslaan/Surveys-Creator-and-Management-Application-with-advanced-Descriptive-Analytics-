@@ -1,0 +1,15 @@
+<div class="mycards">
+<div class="row">
+  
+    <div class="col-sm" *ngFor="let survey of surveys">
+   <div class="card" style="width: 18rem;" >
+     <div class="card-body">
+       <h5 class="card-title">{{survey.name}}</h5>
+       <p class="card-text">Take {{survey.name}} now!</p>
+       <!-- <button class="btn btn-primary" routerLink="/question" >Go to Quiz</button> -->
+       <button class="btn btn-info btn-lg" (click)="takeSurvey(survey)">Go To Survey</button>
+     </div>
+   </div>
+   </div>
+   </div>
+   </div>

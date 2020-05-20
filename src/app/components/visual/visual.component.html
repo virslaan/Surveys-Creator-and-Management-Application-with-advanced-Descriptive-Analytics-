@@ -1,0 +1,42 @@
+<body align="center">
+<div id='BACK'>
+<div class="mycards">
+        <div class="row">
+          
+            <div class="col-sm" *ngFor="let survey of surveys">
+           <div class="card" style="width: 18rem;" >
+             <div class="card-body">
+                <h5 class="card-title">{{survey.name}}</h5>
+                <p class="card-text">Show {{survey.name}} Stats!</p>
+                <button class="btn-info btn-lg" (click)="view(survey.name)">Go To Survey</button>
+                  </div>
+           </div>
+           </div>
+           </div>
+           </div>
+        
+<div class="card" style="padding-left:10%;padding-top: 10%;padding-bottom: 10%;padding-right:20% ;">
+  <h1>{{names}} </h1>
+
+<h3>{{i}} Line statistics</h3>
+
+    
+<div class="chart-container" style="position:static; height:40vh; width:80vw">    
+    <canvas id="canvas3"></canvas>    
+<hr/>
+
+</div>
+<h3>{{i}} Doughnut Chart</h3>
+
+  <div class="chart-container" style="position: relative; height:40vh; width:80vw">    
+    <canvas id="canvas2"></canvas>    </div>
+  <hr/>
+  <h3>{{i}} Bar Chart</h3>
+
+  <div class="" style="position:relative; height:40vh; width:80vw">    
+    <canvas id="canvas"></canvas>    
+  </div>
+
+  </div>
+</div>
+</body>

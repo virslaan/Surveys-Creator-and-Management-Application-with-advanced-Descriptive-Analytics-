@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image:  url(../src/assets/back.jpg);
+    background-color: linear-gradient(to right, rgb(188, 252, 138), rgb(255, 146, 219));
+    /* background-blend-mode: screen; */
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    
+}
+card{
+    margin:10px;
+}

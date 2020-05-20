@@ -1,0 +1,54 @@
+
+<!-- <div class="myques">
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-sm">   
+
+<h3>{{question}}</h3>
+
+<ol>
+    <li *ngFor="let choice of choices">
+       <h4> <input type="radio"> {{choice.choice_text}} </h4>
+        </li>
+
+
+</ol>
+<div class="col-sm-4">
+    <span class="lead text-center" >
+        <button class="btn btn-info btn-lg" >Submit!</button>
+    </span>
+  </div>
+
+  </div> -->
+
+
+
+
+  <div class="container mt-5">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="display-4" style="text-align: center;"> {{question}}</h1>
+                <div *ngFor="let choice of choices" class="lead mt-2">
+                    <label class="btn btn-primary-outline btn-lg ">
+                      <h2> <input type="radio" (click)="calculate(choice)" name="answer"> {{choice.choice_text}} </h2>
+                    </label>
+                </div>
+                <div class="lead">
+                    <button class="btn btn-info btn-lg" (click)="viewresult()" >Submit!</button>
+                </div>
+            
+           
+            </div>
+        </div>
+        
+            
+
+            
+        </div>
+    </div>
+
+<br><br>
+
+
